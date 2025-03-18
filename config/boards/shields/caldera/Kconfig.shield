@@ -1,0 +1,4 @@
+config SHIELD_CALDERA_LEFT
+    def bool $(shields_list_contains,caldera_left)
+config SHIELD_CALDERA_RIGHT
+    def bool $(shields_list_contains,caldera_right)
