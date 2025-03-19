@@ -11,7 +11,7 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-config-caldera-module
+    - name: zmk-keyboard-caldera
       remote: bentleyjensen
       revision: main
   self:
