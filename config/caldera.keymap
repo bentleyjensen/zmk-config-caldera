@@ -29,70 +29,98 @@
  
                  default_layer {
                          display-name = "Base";
- // -------------------------------------------------------------------------  ----------------------------------------------------------------------
- // |     `     |    1    |    2    |    3    |    4    |    5    |            |    6    |    7    |    8    |    9    |    0    |   BKSP   |
- // |    TAB    |    Q    |    W    |    F    |    P    |    B    |            |    J    |    L    |    U    |    Y    |    ;    |    \     |
- // |    ESC    |    A    |    R    |    S    |    T    |    G    |            |    M    |    N    |    E    |    I    |    O    |   ENT    |
- // |   SHFT    |    Z    |    X    |    C    |    D    |    V    |            |    K    |    H    |    ,    |    .    |    /    |    '     |
- // |   Func    |   Sym   |   GUI   |   ALT   |  CTRL   |   SPC   |            |   SPC   |  CTRL   |   ALT   |   GUI   |   Func  |   Sym    |
+  /*
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |   `   |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   | BKSP  |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |  TAB  |   Q   |   W   |   F   |   P   |   B   |       |   J   |   L   |   U   |   Y   |   ;   |   '   |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |  ESC  |   A   |   R   |   S   |   T   |   G   |       |   M   |   N   |   E   |   I   |   O   | ENTER |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  | SHIFT |   Z   |   X   |   C   |   D   |   V   |       |   K   |   H   |   ,   |   .   |   /   | RSHFT |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  | FUNC  |  SYM  |  GUI  |  ALT  | CTRL  | SPACE |       | SPACE | CTRL  |  ALT  |  GUI  |  SYM  | FUNC  |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  */
                          bindings = <
-    &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &bspc_del
-    &kp TAB       &kp Q       &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp SEMI    &kp BSLH
-    &kp ESC       &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp RET
-    &kp LSHFT     &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp APOS
-    &mo FUNC      &mo SYM     &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE               &kp SPACE   &kp RCTRL   &kp RALT    &kp RGUI    &mo FUNC    &mo SYM 
+     &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &bspc_del
+     &kp TAB       &kp Q       &kp W       &kp F       &kp P       &kp B                   &kp J       &kp L       &kp U       &kp Y       &kp SEMI    &kp APOS
+     &kp ESC       &kp A       &kp R       &kp S       &kp T       &kp G                   &kp M       &kp N       &kp E       &kp I       &kp O       &kp ENTER
+     &kp LSHFT     &kp Z       &kp X       &kp C       &kp D       &kp V                   &kp K       &kp H       &kp COMMA   &kp DOT     &kp FSLH    &kp RSHFT
+     &mo FUNC      &mo SYM     &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE               &kp SPACE   &kp RCTRL   &kp RALT    &kp RGUI    &mo SYM     &mo FUNC 
                          >;
                  };
  
                  dvorak_layer {
                          display-name = "Dvorak";
- // -------------------------------------------------------------------------  ----------------------------------------------------------------------
- // |     `     |    1    |    2    |    3    |    4    |    5    |            |    6    |    7    |    8    |    9    |    0    |   BKSP   |
- // |    TAB    |    '    |    ,    |    .    |    P    |    Y    |            |    F    |    G    |    C    |    R    |    L    |    \     |
- // |    ESC    |    A    |    O    |    E    |    U    |    I    |            |    D    |    H    |    T    |    N    |    S    |   ENT    |
- // |   SHFT    |    ;    |    Q    |    J    |    K    |    X    |            |    B    |    M    |    W    |    V    |    Z    |    /     |
- // |   Func    |   Sym   |   GUI   |   ALT   |  CTRL   |   SPC   |            |   SPC   |  CTRL   |   ALT   |   GUI   |   Func  |   Sym    |
+  /*
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |   `   |   1   |   2   |   3   |   4   |   5   |       |   6   |   7   |   8   |   9   |   0   | BKSP  |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |  TAB  |   '   |   ,   |   .   |   P   |   Y   |       |   F   |   G   |   C   |   R   |   L   |   /   |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |  ESC  |   A   |   O   |   E   |   U   |   I   |       |   D   |   H   |   T   |   N   |   S   | ENTER |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  | SHIFT |   ;   |   Q   |   J   |   K   |   X   |       |   B   |   M   |   W   |   V   |   Z   | SHIFT |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  | FUNC  |  SYM  |  GUI  |  ALT  | CTRL  | SPACE |       | SPACE | CTRL  |  ALT  |  GUI  |  SYM  | FUNC  |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  */
                          bindings = <
-    &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &bspc_del
-    &kp TAB       &kp APOS    &kp COMMA   &kp DOT     &kp P       &kp Y                   &kp F       &kp G       &kp C       &kp R       &kp L       &kp BSLH
-    &kp ESC       &kp A       &kp O       &kp E       &kp U       &kp I                   &kp D       &kp H       &kp T       &kp N       &kp S       &kp RET
-    &kp LSHFT     &kp SEMI    &kp Q       &kp J       &kp K       &kp X                   &kp B       &kp M       &kp W       &kp V       &kp Z       &kp FSLH
-    &mo FUNC      &mo SYM     &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE               &kp SPACE   &kp RCTRL   &kp RALT    &kp RGUI    &mo FUNC    &mo SYM 
+     &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp N4      &kp N5                  &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &bspc_del
+     &kp TAB       &kp APOS    &kp COMMA   &kp DOT     &kp P       &kp Y                   &kp F       &kp G       &kp C       &kp R       &kp L       &kp FSLH
+     &kp ESC       &kp A       &kp O       &kp E       &kp U       &kp I                   &kp D       &kp H       &kp T       &kp N       &kp S       &kp ENTER
+     &kp LSHFT     &kp SEMI    &kp Q       &kp J       &kp K       &kp X                   &kp B       &kp M       &kp W       &kp V       &kp Z       &kp RSHFT
+     &mo FUNC      &mo SYM     &kp LGUI    &kp LALT    &kp LCTRL   &kp SPACE               &kp SPACE   &kp RCTRL   &kp RALT    &kp RGUI    &mo SYM     &mo FUNC 
                          >;
                  };
  
                  symbol_layer {
                          display-name = "Sym";
- // -------------------------------------------------------------------------  ----------------------------------------------------------------------
- // |           |         |         |         |         |  (LPAR)  |            | (RPAR)  |    7    |    8    |    9    |    -    |    =     |
- // |           |    ↑    |         |         |         |  {LBRC}  |            | {RBRC}  |    4    |    5    |    6    |         |          |
- // |     ←     |    ↓    |    →    |         |         |  [LBKT]  |            | [RBKT]  |    1    |    2    |    3    |         |          |
- // |           |         |         |         |         |          |            |         |    0    |    0    |         |         |          |
- // |           |         |         |         |         |          |            |         |         |         |         |         |          |
+  /*
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |       |       |       |   (   |   )   |       |       |   /   |   *   |   %   |   -   |   =   |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |       |   ↑   |       |   {   |   }   |       |   7   |   8   |   9   |   -   |       |   \   |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |   ←   |   ↓   |   →   |   [   |   ]   |       |   4   |   5   |   6   |   +   |       |       |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |       |       |       |       |       |       |   1   |   2   |   3   |   ↑   |       |       |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |       |       |       |       |       |       |   0   |   .   |   ←   |   ↓   |   →   |       |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  */
                          bindings = <
-    &none         &none       &none       &none       &none       &kp LPAR                &kp RPAR    &kp N7      &kp N8      &kp N9      &kp MINUS   &kp EQUAL
-    &none         &kp UP      &none       &none       &none       &kp LBRC                &kp RBRC    &kp N4      &kp N5      &kp N6      &none       &none
-    &kp LEFT      &kp DOWN    &kp RIGHT   &none       &none       &kp LBKT                &kp RBKT    &kp N1      &kp N2      &kp N3      &none       &none
-    &none         &none       &none       &none       &none       &none                   &none       &kp N0      &kp N0      &none       &none       &none
-    &trans        &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
+     &none         &none       &none       &none       &kp LPAR    &kp RPAR                &none       &kp FSLH    &kp STAR    &kp PRCNT   &kp MINUS   &kp EQUAL
+     &none         &none       &kp UP      &none       &kp LBRC    &kp RBRC                &kp N7      &kp N8      &kp N9      &kp MINUS   &none       &kp BSLH
+     &none         &kp LEFT    &kp DOWN    &kp RIGHT   &kp LBKT    &kp RBKT                &kp N4      &kp N5      &kp N6      &kp PLUS    &none       &none
+     &none         &none       &none       &none       &none       &none                   &kp N1      &kp N2      &kp N3      &kp UP      &none       &none
+     &trans        &trans      &trans      &trans      &trans      &trans                  &kp N0      &kp DOT     &kp LEFT    &kp DOWN    &kp RIGHT   &trans
                          >;
                  };
  
                  function_layer {
                          display-name = "Func";
- // -------------------------------------------------------------------------  ----------------------------------------------------------------------
- // | Toggle out |   BT0   |   BT1   |   BT2   |   BT3   |   BT4   |            |  Mute   | Vol Down |  Vol Up  |         |  Dvorak  |   HOME   |
- // | BLE output |         |         |         |         |         |            |   RW    |   Prev   |  Play/P  |   Next  |    FF    |   END    |
- // | USB output |         |         |         |         |         |            |    H    |     J    |     K    |    L    |          |          |
- // |   BT CLR   |         |         |         |         |         |            |         |          |          |         |          |          |
- // |            |         |         |         |         |         |            |         |          |          |         |          |          |
+  /*
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |  TOGL |  BLE  |  USB  |       |       | BTCLR |       |  MUTE | VOL-  | VOL+  |       | DVORK |DELETE |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |  BT0  |  BT1  |  BT2  |  BT3  |  BT4  |       |       |  RW   | PREV  | PLAY  | NEXT  |  FF   |  HOME |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |       |       |       |       |       |       |   H   |   J   |   K   |   L   |       |  END  |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |       |       |       |       | RESET |       | RESET |       |       |       |       |       |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  |       |       |       |       |       | BOOT  |       | BOOT  |       |       |       |       |       |
+  +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
+  */
                          bindings = <
-    &out OUT_TOG   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &none       &tog DVORAK  &kp HOME
-    &out OUT_BLE   &none        &none        &none        &none        &none               &kp C_RW    &kp C_PREV   &kp C_PP     &kp C_NEXT  &kp C_FF     &kp END
-    &out OUT_USB   &none        &none        &none        &none        &none               &kp H       &kp J        &kp K        &kp L       &none        &none
-    &bt BT_CLR     &none        &none        &none        &none        &none               &none       &none        &none        &none       &none        &none
-    &trans         &trans       &trans       &trans       &trans       &trans              &trans      &trans       &trans       &trans      &trans       &trans
+     &out OUT_TOG &out OUT_BLE &out OUT_USB &none        &none        &bt BT_CLR           &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP &none       &tog DVORAK &kp DELETE
+     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none                &kp C_RW    &kp C_PREV   &kp C_PP     &kp C_NEXT  &kp C_FF    &kp HOME
+     &none        &none        &none        &none        &none        &none                &kp H       &kp J        &kp K        &kp L       &none       &kp END
+     &none        &none        &none        &none        &none        &sys_reset           &sys_reset  &none        &none        &none       &none       &none
+     &trans       &trans       &trans       &trans       &trans       &bootloader          &bootloader &trans       &trans       &trans      &trans      &trans
                          >;
                  };
          };
- };
+ }
