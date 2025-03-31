@@ -70,11 +70,11 @@
                          display-name = "Sym";
   /*
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
-  |       |       |       |       |   (   |   )   |       |       |   /   |   *   |   %   |   -   |   =   |
+  |       |       |       |       |   (   |   )   |       |       |   /   |   *   |   %   |       |   =   |
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
   |       |       |   ↑   |       |   {   |   }   |       |   7   |   8   |   9   |   -   |       |   \   |
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
-  |       |   ←   |   ↓   |   →   |   [   |   ]   |       |   4   |   5   |   6   |   +   |       |       |
+  |       |   ←   |   ↓   |   →   |   [   |   ]   |       |   4   |   5   |   6   |   +   |       |   -   |
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
   | SHIFT |       |       |       |       |       |       |   1   |   2   |   3   |   ↑   |       | SHIFT |
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
@@ -82,9 +82,9 @@
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
   */
                          bindings = <
-     &none         &none       &none       &none       &kp LPAR    &kp RPAR                &none       &kp FSLH    &kp STAR    &kp PRCNT   &kp MINUS   &kp EQUAL
+     &none         &none       &none       &none       &kp LPAR    &kp RPAR                &none       &kp FSLH    &kp STAR    &kp PRCNT   &none       &kp EQUAL
      &none         &none       &kp UP      &none       &kp LBRC    &kp RBRC                &kp N7      &kp N8      &kp N9      &kp MINUS   &none       &kp BSLH
-     &none         &kp LEFT    &kp DOWN    &kp RIGHT   &kp LBKT    &kp RBKT                &kp N4      &kp N5      &kp N6      &kp PLUS    &none       &none
+     &none         &kp LEFT    &kp DOWN    &kp RIGHT   &kp LBKT    &kp RBKT                &kp N4      &kp N5      &kp N6      &kp PLUS    &none       &kp MINUS
      &kp LSHFT     &none       &none       &none       &none       &none                   &kp N1      &kp N2      &kp N3      &kp UP      &none       &kp RSHFT
      &trans        &trans      &trans      &trans      &trans      &trans                  &kp N0      &kp DOT     &kp LEFT    &kp DOWN    &kp RIGHT   &trans
                          >;
