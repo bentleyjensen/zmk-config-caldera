@@ -13,4 +13,4 @@
 
 / {
     zmk,split-role = "central";
-}
+};
