@@ -14,3 +14,7 @@
         , <&pro_micro 3 GPIO_ACTIVE_HIGH>
         ;
 };
+
+/ {
+    zmk,split-role = "peripheral";
+};
