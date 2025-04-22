@@ -307,7 +307,7 @@
 		/* 0 */
 		default {
 			bindings = <
-			&none    &none                &none                 &none               &none               &none                    &none                     &none          &none                &none                   &none                   &none
+			&none    &none                &none                 &bt_clcla           &sys_reset          &bootloader              &bootloader               &sys_reset     &bt_clcla            &none                   &none                   &none
 			&none    &kp Q                &kp W                 &kp F               &kp P               &kp B                    &kp J                     &kp L          &kp U                &kp Y                   &apos_grave             &none
 			&none    &mt LC(LA(LSHIFT)) A &mo_kp_tap MOUSE R    &mo_kp_tap NAV S    &mo_kp_tap NUM T    &kp G                    &kp M                     &kp N          &kp E                &mo_kp_tap SETTING I    &mt LC(LA(LSHIFT)) O    &none
 			&none    &kp Z                &mt LALT X            &mt LCMD C          &mt LCMD D          &kp V                    &kp K                     &mt LCMD H     &cmma_hold LCMD 0    &dot_hold LALT 0        &kp SLASH               &none
