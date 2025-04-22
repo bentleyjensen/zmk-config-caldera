@@ -13,21 +13,6 @@
  #define SYS  1
  
 / {
-        behaviors {
-                bt_debug: bt_debug {
-                        compatible = "zmk,behavior-cmd";
-                        label = "BT_DEBUG";
-                        #binding-cells = <0>;
-                        cmd = "bt info";
-                };
-                split_debug: split_debug {
-                        compatible = "zmk,behavior-cmd";
-                        label = "SPLIT_DEBUG";
-                        #binding-cells = <0>;
-                        cmd = "split info";
-                };
-        };
- 
          keymap {
                  compatible = "zmk,keymap";
   /*
@@ -58,7 +43,7 @@
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
   |       |       |       |       | BOOT  | RESET |       | BOOT  | RESET |       |       |       |       |
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
-  |       |       |       |       |       | DEBUG |       | DEBUG |       |       |       |       |       |
+  |       |       |       |       |       |       |       |       |       |       |       |       |       |
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
   |       |       |       |       |       |       |       |       |       |       |       |       |       |
   +-------+-------+-------+-------+-------+-------+       +-------+-------+-------+-------+-------+-------+
@@ -71,7 +56,7 @@
                          display-name = "Sys";
                          bindings = <
      &none        &none        &none        &none        &sys_reset   &bootloader          &bootloader  &sys_reset   &none        &none        &none        &none
-     &none        &none        &none        &none        &none        &bt_debug            &bt_debug    &none        &none        &none        &none        &none
+     &none        &none        &none        &none        &none        &none                &none        &none        &none        &none        &none        &none
      &none        &none        &none        &none        &none        &none                &none        &none        &none        &none        &none        &none
      &none        &none        &none        &none        &none        &none                &none        &none        &none        &none        &none        &none
      &none        &none        &none        &none        &none        &none                &none        &none        &none        &none        &none        &none
