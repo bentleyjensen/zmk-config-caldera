@@ -11,7 +11,7 @@
  #define DEFAULT 0
  #define SYS  1
  
- / {
+/ {
         behaviors {
                 bt_debug: bt_debug {
                         compatible = "zmk,behavior-cmd";
