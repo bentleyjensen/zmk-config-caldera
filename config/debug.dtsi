@@ -1,0 +1,16 @@
+/ {
+    behaviors {
+        bt_debug: bt_debug {
+            compatible = "zmk,behavior-cmd";
+            label = "BT_DEBUG";
+            #binding-cells = <0>;
+            cmd = "bt info";
+        };
+        split_debug: split_debug {
+            compatible = "zmk,behavior-cmd";
+            label = "SPLIT_DEBUG";
+            #binding-cells = <0>;
+            cmd = "split info";
+        };
+    };
+};

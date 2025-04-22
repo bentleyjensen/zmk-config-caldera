@@ -4,28 +4,15 @@
  * SPDX-License-Identifier: MIT
  */
  
- #include <behaviors.dtsi>
+ #include <debug.dtsi>
  #include <dt-bindings/zmk/keys.h>
  #include <dt-bindings/zmk/bt.h>
  #include <dt-bindings/zmk/outputs.h>
  
  #define DEFAULT 0
  #define SYS  1
+ 
  / {
-    behaviors {
-        bt_debug: bt_debug {
-            compatible = "zmk,behavior-cmd";
-            label = "BT_DEBUG";
-            #binding-cells = <0>;
-            cmd = "bt info";
-        };
-        split_debug: split_debug {
-            compatible = "zmk,behavior-cmd";
-            label = "SPLIT_DEBUG";
-            #binding-cells = <0>;
-            cmd = "split info";
-        };
-    };
          keymap {
                  compatible = "zmk,keymap";
  
