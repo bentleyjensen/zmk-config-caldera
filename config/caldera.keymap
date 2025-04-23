@@ -23,7 +23,7 @@
 
 &mt {
 	flavor = "tap-preferred";
-	tapping-term-ms = <220>;
+	tapping-term-ms = <300>;
 	quick-tap-ms = <180>;
 	require-prior-idle-ms = <100>;
 };
@@ -48,74 +48,74 @@
 		
 		combo_back_history {
 			timeout-ms = <40>;
-			key-positions = <15 16>;
+			key-positions = <14 15>;
 			bindings = <&kp LG(LBKT)>;
 		};
 		
 		combo_forward_history {
 			timeout-ms = <40>;
-			key-positions = <16 17>;
+			key-positions = <15 16>;
 			bindings = <&kp LG(RBKT)>;
 		};
 		
 		combo_app_switcher {
 			timeout-ms = <40>;
-			key-positions = <39 40 41>;
+			key-positions = <38 39 40>;
 			bindings = <&kp LG(TAB)>;
 		};
 		
 		combo_space {
 			timeout-ms = <40>;
-			key-positions = <11 13>;
+			key-positions = <10 12>;
 			bindings = <&kp SPACE>;
 		};
 		
 		combo_ctrl_b {
 			timeout-ms = <40>;
-			key-positions = <27 28>;
+			key-positions = <26 27>;
 			bindings = <&kp LC(B)>;
 		};
 		
 		combo_save {
 			timeout-ms = <40>;
-			key-positions = <12 13>;
+			key-positions = <27 28>;
 			// bindings = <&kp LC(S)>;
 			bindings = <&kp C_AC_SAVE>;
 		};
 		
 		combo_copy_yank {
 			timeout-ms = <40>;
-			key-positions = <39 40>;
+			key-positions = <38 39>;
 			bindings = <&kp LG(C)>;
 		};
 		
 		combo_paste {
 			timeout-ms = <40>;
-			key-positions = <40 41>;
+			key-positions = <39 40>;
 			bindings = <&kp LG(V)>;
 		};
 		
 		combo_ctrl_tab {
 			timeout-ms = <40>;
-			key-positions = <16 29>;
+			key-positions = <15 28>;
 			bindings = <&kp LC(TAB)>;
 		};
 		
 		combo_ctrl_tab_back {
 			timeout-ms = <40>;
-			key-positions = <16 27>;
+			key-positions = <15 26>;
 			bindings = <&kp LC(LS(TAB))>;
 		};
 		
 		combo_swap_tab_down {
 			timeout-ms = <40>;
-			key-positions = <17 28>;
+			key-positions = <16 27>;
 			bindings = <&kp LC(LS(PAGE_DOWN))>;
 		};
 		
 		combo_swap_tab_up {
 			timeout-ms = <40>;
-			key-positions = <15 28>;
+			key-positions = <14 27>;
 			bindings = <&kp LC(LS(PAGE_UP))>;
 		};
 		
@@ -125,7 +125,7 @@
 		
 		combo_esc {
 			timeout-ms = <40>;
-			key-positions = <32 33>;
+			key-positions = <31 32>;
 			bindings = <&kp ESC>;
 			layers = <0 1 2 3>;
 		};
@@ -139,38 +139,38 @@
 		
 		combo_del {
 			timeout-ms = <40>;
-			key-positions = <44 45>;
+			key-positions = <43 44>;
 			bindings = <&kp DEL>;
 		};
 		
 		combo_tab {
 			timeout-ms = <40>;
-			key-positions = <45 46>;
+			key-positions = <44 45>;
 			bindings = <&kp TAB>;
 		};
 		
 		combo_bol {
 			timeout-ms = <40>;
-			key-positions = <20 21>;
+			key-positions = <19 20>;
 			bindings = <&kp LG(LEFT)>;
 		};
 		
 		combo_eol {
 			timeout-ms = <40>;
-			key-positions = <21 22>;
+			key-positions = <20 21>;
 			bindings = <&kp LG(RIGHT)>;
 		};
 		
 		combo_word_left {
 			timeout-ms = <40>;
-			key-positions = <21 32>;
+			key-positions = <20 31>;
 			bindings = <&kp LA(LEFT)>;
 			layers = <0 1 2 3>;
 		};
 		
 		combo_word_right {
 			timeout-ms = <40>;
-			key-positions = <21 34>;
+			key-positions = <20 33>;
 			bindings = <&kp LA(RIGHT)>;
 			layers = <0 1 2 3>;
 		};
@@ -182,25 +182,25 @@
 		
 		combo_focus_left {
 			timeout-ms = <35>;
-			key-positions = <33 44>;
+			key-positions = <32 43>;
 			bindings = <&kp LC(H)>;
 		};
 		
 		combo_focus_right {
 			timeout-ms = <50>;
-			key-positions = <33 46>;
+			key-positions = <32 45>;
 			bindings = <&kp LC(L)>;
 		};
 		
 		combo_focus_down {
 			timeout-ms = <35>;
-			key-positions = <32 45>;
+			key-positions = <31 44>;
 			bindings = <&kp LC(J)>;
 		};
 		
 		combo_focus_up {
 			timeout-ms = <50>;
-			key-positions = <34 45>;
+			key-positions = <33 44>;
 			bindings = <&kp LC(K)>;
 		};
 		
@@ -210,7 +210,7 @@
 		
 		combo_caps_word {
 			timeout-ms = <55>;
-			key-positions = <29 32>;
+			key-positions = <28 31>;
 			bindings = <&caps_word>;
 		};
 		
@@ -302,11 +302,11 @@
 		/* 0 */
 		default {
 			bindings = <
-			&none    &out OUT_USB         &out OUT_BLE          &bt_clcla           &sys_reset          &bootloader              &bootloader               &sys_reset     &bt_clcla            &out OUT_BLE            &out OUT_USB                   &none
-			&none    &kp Q                &kp W                 &kp F               &kp P               &kp B                    &kp J                     &kp L          &kp U                &kp Y                   &apos_grave             &none
-			&none    &mt LC(LA(LSHIFT)) A &kp R                 &mo_kp_tap NAV S    &mo_kp_tap NUM T    &kp G                    &kp M                     &kp N          &kp E                &mo_kp_tap SETTING I    &mt LC(LA(LSHIFT)) O    &none
-			&none    &kp Z                &mt LALT X            &mt LCMD C          &mt LCMD D          &kp V                    &kp K                     &mt LCMD H     &cmma_hold LCMD 0    &dot_hold LALT 0        &kp SLASH               &none
-			&none    &none                &none                 &none               &sk LSFT            &mo_kp SYM BSPC          &sk_kp_tap LCTRL SPACE    &key_repeat    &none                &none                   &none                   &none
+			&none        &none                &none                 &none               &none               &none                    &none                     &none          &none                &none                   &none                   &none
+			&none        &kp Q                &kp W                 &kp F               &kp P               &kp B                    &kp J                     &kp L          &kp U                &kp Y                   &apos_grave             &none
+			&none        &mt LC(LA(LSHIFT)) A &kp R                 &mo_kp_tap NAV S    &mo_kp_tap NUM T    &kp G                    &kp M                     &kp N          &kp E                &mo_kp_tap SETTING I    &mt LC(LA(LSHIFT)) O    &none
+			&none        &kp Z                &mt LALT X            &mt LCMD C          &mt LCMD D          &kp V                    &kp K                     &mt LCMD H     &cmma_hold LCMD 0    &dot_hold LALT 0        &kp SLASH               &none
+			&none        &none                &none                 &none               &sk LSFT            &mo_kp SYM SPACE         &sk_kp_tap LCTRL BSPC     &key_repeat    &none                &none                   &none                   &none
 			>;
 		};
 
@@ -346,11 +346,11 @@
 		/* 4 */
 		settings {
 			bindings = <
-			&none    &none            &none            &none             &none           &none                 &none       &none                   &none           &none     &none    &none
-			&none    &none            &bt_clcla        &ext_power EP_OFF &out OUT_TOG    &none                 &none       &none                   &none           &none     &none    &none
-			&none    &bt BT_SEL 3     &bt BT_SEL 2     &bt BT_SEL 1      &bt BT_SEL 0    &bt BT_SEL 4          &none       &kp C_BRIGHTNESS_INC    &kp C_VOL_UP    &trans    &none    &none
-			&none    &bt BT_DISC 3    &bt BT_DISC 2    &none             &none           &none                 &none       &kp C_BRIGHTNESS_DEC    &kp C_VOL_DN    &none     &none    &none
-			&none    &none            &none            &none             &none           &none                 &kp C_PP    &kp C_NEXT              &none           &none     &none    &none
+			&none    &none            &none             &none             &none           &none                 &none       &none                   &none           &none     &none    &none
+			&none    &bt_clcla        &ext_power EP_TOG &out OUT_TOG      &out OUT_BLE    &out OUT_USB          &none       &none                   &none           &none     &none    &none
+			&none    &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4          &none       &kp C_BRIGHTNESS_INC    &kp C_VOL_UP    &trans    &none    &none
+			&none    &bt BT_DISC 0    &bt BT_DISC 1     &bt BT_DISC 2     &bt BT_DISC 3   &bt BT_DISC 4         &none       &kp C_BRIGHTNESS_DEC    &kp C_VOL_DN    &none     &none    &none
+			&none    &none            &none             &none             &none           &none                 &kp C_PP    &kp C_NEXT              &none           &none     &none    &none
 			>;
 		};
 	};
