@@ -18,7 +18,7 @@
 #define NUM         1
 #define SYM         2
 #define NAV         3
-#define SETTING     4
+#define SYS     4
 
 
 &mt {
@@ -41,181 +41,192 @@
 / {
 	combos {
 		compatible = "zmk,combos";
-		
+
 		/****************************************
 		********** Left Hand Combos  ************
 		*****************************************/
-		
+
+		combo_ltab {
+			timeout-ms = <40>;
+			key-positions = <13 14>;
+			bindings = <&kp LG(LBKT)>;
+		};
+
 		combo_back_history {
 			timeout-ms = <40>;
 			key-positions = <14 15>;
 			bindings = <&kp LG(LBKT)>;
 		};
-		
+
 		combo_forward_history {
 			timeout-ms = <40>;
 			key-positions = <15 16>;
 			bindings = <&kp LG(RBKT)>;
 		};
-		
+
 		combo_app_switcher {
 			timeout-ms = <40>;
 			key-positions = <38 39 40>;
 			bindings = <&kp LG(TAB)>;
 		};
-		
+
 		combo_space {
 			timeout-ms = <40>;
 			key-positions = <10 12>;
 			bindings = <&kp SPACE>;
 		};
-		
+
 		combo_ctrl_b {
 			timeout-ms = <40>;
 			key-positions = <26 27>;
 			bindings = <&kp LC(B)>;
 		};
-		
+
 		combo_save {
 			timeout-ms = <40>;
 			key-positions = <27 28>;
-			// bindings = <&kp LC(S)>;
-			bindings = <&kp C_AC_SAVE>;
+			bindings = <&kp LC(S)>;
 		};
-		
+
 		combo_copy_yank {
 			timeout-ms = <40>;
 			key-positions = <38 39>;
-			bindings = <&kp LG(C)>;
+			bindings = <&kp LC(C)>;
 		};
-		
+
 		combo_paste {
 			timeout-ms = <40>;
 			key-positions = <39 40>;
-			bindings = <&kp LG(V)>;
+			bindings = <&kp LC(V)>;
 		};
-		
+
 		combo_ctrl_tab {
 			timeout-ms = <40>;
 			key-positions = <15 28>;
 			bindings = <&kp LC(TAB)>;
 		};
-		
+
 		combo_ctrl_tab_back {
 			timeout-ms = <40>;
 			key-positions = <15 26>;
 			bindings = <&kp LC(LS(TAB))>;
 		};
-		
+
 		combo_swap_tab_down {
 			timeout-ms = <40>;
 			key-positions = <16 27>;
 			bindings = <&kp LC(LS(PAGE_DOWN))>;
 		};
-		
+
 		combo_swap_tab_up {
 			timeout-ms = <40>;
 			key-positions = <14 27>;
 			bindings = <&kp LC(LS(PAGE_UP))>;
 		};
-		
+
 		/****************************************
 		********** Right Hand Combos  ***********
 		****************************************/
-		
+
+		combo_bol {
+			timeout-ms = <40>;
+			key-positions = <19 20>;
+			bindings = <&kp LG(LEFT)>;
+		};
+
+		combo_eol {
+			timeout-ms = <40>;
+			key-positions = <20 21>;
+			bindings = <&kp LG(RIGHT)>;
+		};
+
+		combo_backsp {
+			timeout-ms = <40>;
+			key-positions = <21 22>;
+			bindings = <&kp BSPC>
+		}
+
 		combo_esc {
 			timeout-ms = <40>;
 			key-positions = <31 32>;
 			bindings = <&kp ESC>;
 			layers = <0 1 2 3>;
 		};
-		
+
 		combo_return {
 			timeout-ms = <40>;
 			key-positions = <33 34>;
 			bindings = <&kp RETURN>;
 			layers = <0 1 2 3>;
 		};
-		
+
 		combo_del {
 			timeout-ms = <40>;
 			key-positions = <43 44>;
 			bindings = <&kp DEL>;
 		};
-		
+
 		combo_tab {
 			timeout-ms = <40>;
 			key-positions = <44 45>;
 			bindings = <&kp TAB>;
 		};
-		
-		combo_bol {
-			timeout-ms = <40>;
-			key-positions = <19 20>;
-			bindings = <&kp LG(LEFT)>;
-		};
-		
-		combo_eol {
-			timeout-ms = <40>;
-			key-positions = <20 21>;
-			bindings = <&kp LG(RIGHT)>;
-		};
-		
+
 		combo_word_left {
 			timeout-ms = <40>;
 			key-positions = <20 31>;
 			bindings = <&kp LA(LEFT)>;
 			layers = <0 1 2 3>;
 		};
-		
+
 		combo_word_right {
 			timeout-ms = <40>;
 			key-positions = <20 33>;
 			bindings = <&kp LA(RIGHT)>;
 			layers = <0 1 2 3>;
 		};
-		
+
 		/****************************
 		******    Code Combos   *****
 		******  Right Hand Vim  *****
 		*****************************/
-		
+
 		combo_focus_left {
 			timeout-ms = <35>;
 			key-positions = <32 43>;
 			bindings = <&kp LC(H)>;
 		};
-		
+
 		combo_focus_right {
 			timeout-ms = <50>;
 			key-positions = <32 45>;
 			bindings = <&kp LC(L)>;
 		};
-		
+
 		combo_focus_down {
 			timeout-ms = <35>;
 			key-positions = <31 44>;
 			bindings = <&kp LC(J)>;
 		};
-		
+
 		combo_focus_up {
 			timeout-ms = <50>;
 			key-positions = <33 44>;
 			bindings = <&kp LC(K)>;
 		};
-		
+
 		/****************************************
 		********** Both Hand Combos  ***********
 		****************************************/
-		
+
 		combo_caps_word {
 			timeout-ms = <55>;
 			key-positions = <28 31>;
 			bindings = <&caps_word>;
 		};
-		
+
 	};
-	
+
 	behaviors {
 		mo_kp: momentary_hold_key_press_hold {
 			compatible = "zmk,behavior-hold-tap";
@@ -225,7 +236,7 @@
 			quick-tap-ms = <180>;
 			bindings = <&mo>, <&kp>;
 		};
-		
+
 		mo_kp_tap: momentary_hold_key_press_tap_prefer {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
@@ -235,7 +246,7 @@
 			require-prior-idle-ms = <100>;
 			bindings = <&mo>, <&kp>;
 		};
-		
+
 		sk_kp_tap: stiky_key_press_tap_prefer {
 			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
@@ -245,55 +256,21 @@
 			require-prior-idle-ms = <100>;
 			bindings = <&sk>, <&kp>;
 		};
-		
+
 		bt_clcla: tap_dance_bt_control {
 			compatible = "zmk,behavior-tap-dance";
 			#binding-cells = <0>;
 			tapping-term-ms = <300>;
 			bindings = <&none>, <&bt BT_CLR>, <&bt BT_CLR_ALL>;
 		};
-		
-		apos_grave: aposgrave {
+
+		sh: shift_pair {
 			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp APOS>, <&kp GRAVE>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		
-		dot: period_mod_tap {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp DOT>, <&kp DQT>;
-			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		
-		dot_hold: dot_hold {
-			compatible = "zmk,behavior-hold-tap";
 			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <220>;
-			quick-tap-ms = <180>;
-			require-prior-idle-ms = <100>;
-			bindings = <&kp>, <&dot>;
-		};
-		
-		cmma: cmma_mod_tap {
-			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp COMMA>, <&kp EXCL>;
+			bindings = <&kp>, <&kp>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
-		};
-		
-		cmma_hold: cmma_hold {
-			compatible = "zmk,behavior-hold-tap";
-			#binding-cells = <2>;
-			flavor = "tap-preferred";
-			tapping-term-ms = <220>;
-			quick-tap-ms = <180>;
-			require-prior-idle-ms = <100>;
-			bindings = <&kp>, <&cmma>;
-		};
-		
+		}
+
 	};
 
 	keymap {
@@ -302,55 +279,55 @@
 		/* 0 */
 		default {
 			bindings = <
-			&none        &none                &none                 &none               &none               &none                    &none                     &none          &none                &none                   &none                   &none
-			&none        &kp Q                &kp W                 &kp F               &kp P               &kp B                    &kp J                     &kp L          &kp U                &kp Y                   &apos_grave             &none
-			&none        &mt LC(LA(LSHIFT)) A &kp R                 &mo_kp_tap NAV S    &mo_kp_tap NUM T    &kp G                    &kp M                     &kp N          &kp E                &mo_kp_tap SETTING I    &mt LC(LA(LSHIFT)) O    &none
-			&none        &kp Z                &mt LALT X            &mt LCMD C          &mt LCMD D          &kp V                    &kp K                     &mt LCMD H     &cmma_hold LCMD 0    &dot_hold LALT 0        &kp SLASH               &none
-			&none        &none                &none                 &none               &sk LSFT            &mo_kp SYM SPACE         &sk_kp_tap LCTRL BSPC     &key_repeat    &none                &none                   &none                   &none
+			&none    &none                   &none             &none               &none               &none                /**/     &none                     &none          &none         &none                   &none                   &none
+			&none    &sh SQT GRAVE           &sh COMMA EXCL    &sh DOT DQT         &kp P               &kp Y                /**/     &kp F                     &kp G          &kp C         &kp R                   &apos_grave             &none
+			&none    &mt LC(LA(LSHIFT)) A    &kp O             &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I                /**/     &kp D                     &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &none
+			&none    &sh FSLH QMARK          &mt LALT Q        &mt LCMD J          &mt LCTRL K         &kp X                /**/     &kp B                     &mt LCTRL M    &mt LCMD W    &mt LALT V              &kp Z                   &none
+			&none    &none                   &none             &none               &sk LSFT            &mo_kp SYM SPACE     /**/     &sk_kp_tap LCTRL BSPC     &key_repeat    &none         &none                   &none                   &none
 			>;
 		};
 
 		/* 1 */
 		numbers {
 			bindings = <
-			&none    &none    &none       &none       &none     &none           &none        &none        &none        &none        &none        &none
-			&none    &none    &none       &none       &none     &none           &none        &kp NUM_7    &kp NUM_8    &kp NUM_9    &none        &none
-			&none    &none    &sk LALT    &sk LCMD    &trans    &none           &kp MINUS    &kp NUM_4    &kp NUM_5    &kp NUM_6    &kp NUM_0    &none
-			&none    &none    &none       &none       &none     &none           &kp DOT      &kp NUM_1    &kp NUM_2    &kp NUM_3    &kp SLASH    &none
-			&none    &none    &none       &none       &trans    &trans          &trans       &trans       &none        &none        &none        &none
+			&none    &none    &none        &none       &none     &none      /**/     &none        &none        &none        &none        &none        &none
+			&none    &none    &none        &none       &none     &none      /**/     &none        &kp NUM_7    &kp NUM_8    &kp NUM_9    &none        &none
+			&none    &none    &sk LALT     &sk LCMD    &trans    &none      /**/     &kp MINUS    &kp NUM_4    &kp NUM_5    &kp NUM_6    &kp NUM_0    &none
+			&none    &none    &sk LCTRL    &none       &none     &none      /**/     &kp DOT      &kp NUM_1    &kp NUM_2    &kp NUM_3    &kp SLASH    &none
+			&none    &none    &none        &none       &trans    &trans     /**/     &trans       &trans       &none        &none        &none        &none
 			>;
 		};
 
 		/* 2 */
 		symbol {
 			bindings = <
-			&none    &none            &none          &none            &none            &none              &none            &none          &none          &none           &none        &none
-			&none    &none            &kp EXCL       &kp LBRC         &kp RBRC         &none              &none            &kp PERCENT    &kp PLUS       &kp EQUAL       &none        &none
-			&none    &kp UNDER        &kp AMPS       &kp LPAR         &kp RPAR         &kp TILDE          &kp CARET        &kp STAR       &kp HASH       &kp DOLLAR      &kp MINUS    &none
-			&none    &kp SEMICOLON    &mt LALT AT    &mt LCMD LBKT    &mt LCMD RBKT    &kp PIPE           &kp BACKSLASH    &mt LCMD LT    &mt LCMD GT    &mt LALT DQT    &kp COLON    &none
-			&none    &none            &none          &none            &trans           &trans             &trans           &trans         &none          &none           &none        &none
+			&none    &none            &none          &none            &none             &none         /**/     &none            &none           &none          &none           &none        &none
+			&none    &none            &kp EXCL       &kp LBRC         &kp RBRC          &none         /**/     &none            &kp PERCENT     &kp PLUS       &kp EQUAL       &none        &none
+			&none    &kp UNDER        &kp AMPS       &kp LPAR         &kp RPAR          &kp TILDE     /**/     &kp CARET        &kp STAR        &kp HASH       &kp DOLLAR      &kp MINUS    &none
+			&none    &kp SEMICOLON    &mt LALT AT    &mt LCMD LBKT    &mt LCTRL RBKT    &kp PIPE      /**/     &kp BACKSLASH    &mt LCTRL LT    &mt LCMD GT    &mt LALT DQT    &kp COLON    &none
+			&none    &none            &none          &none            &trans            &trans        /**/     &trans           &trans          &none          &none           &none        &none
 			>;
 		};
 
 		/* 3 */
 		navigation {
 			bindings = <
-			&none    &none    &none              &none     &none           &none           &none       &none            &none          &none        &none    &none
-			&none    &none    &kp INSERT         &none     &none           &none           &none       &kp END          &kp HOME       &none        &none    &none
-			&none    &none    &mt LALT RETURN    &trans    &mt LCMD TAB    &none           &kp LEFT    &kp DOWN         &kp UP         &kp RIGHT    &none    &none
-			&none    &none    &kp ESC            &none     &kp DEL         &none           &none       &kp PAGE_DOWN    &kp PAGE_UP    &none        &none    &none
-			&none    &none    &none              &none     &trans          &trans          &trans      &trans           &none          &none        &none    &none
+			&none    &none    &none              &none     &none           &none      /**/     &none       &none            &none          &none        &none    &none
+			&none    &none    &kp INSERT         &none     &none           &none      /**/     &none       &kp END          &kp HOME       &none        &none    &none
+			&none    &none    &mt LALT RETURN    &trans    &mt LCMD TAB    &none      /**/     &kp LEFT    &kp DOWN         &kp UP         &kp RIGHT    &none    &none
+			&none    &none    &kp ESC            &none     &kp DEL         &none      /**/     &none       &kp PAGE_DOWN    &kp PAGE_UP    &none        &none    &none
+			&none    &none    &none              &none     &trans          &trans     /**/     &trans      &trans           &none          &none        &none    &none
 			>;
 		};
 
 		/* 4 */
-		settings {
+		system {
 			bindings = <
-			&none    &none            &none             &none             &none           &none                 &none       &none                   &none           &none     &none    &none
-			&none    &bt_clcla        &ext_power EP_TOG &out OUT_TOG      &out OUT_BLE    &out OUT_USB          &none       &none                   &none           &none     &none    &none
-			&none    &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4          &none       &kp C_BRIGHTNESS_INC    &kp C_VOL_UP    &trans    &none    &none
-			&none    &bt BT_DISC 0    &bt BT_DISC 1     &bt BT_DISC 2     &bt BT_DISC 3   &bt BT_DISC 4         &none       &kp C_BRIGHTNESS_DEC    &kp C_VOL_DN    &none     &none    &none
-			&none    &none            &none             &none             &none           &none                 &kp C_PP    &kp C_NEXT              &none           &none     &none    &none
+			&none    &none            &none                &none            &none           &none             /**/     &none       &none                   &none           &none     &none    &none
+			&none    &bt_clcla        &ext_power EP_TOG    &out OUT_BLE     &out OUT_USB    &out OUT_TOG      /**/     &none       &none                   &none           &none     &none    &none
+			&none    &bt BT_SEL 0     &bt BT_SEL 1         &bt BT_SEL 2     &bt BT_SEL 3    &bt BT_SEL 4      /**/     &none       &kp C_BRIGHTNESS_INC    &kp C_VOL_UP    &trans    &none    &none
+			&none    &bt BT_DISC 0    &bt BT_DISC 1        &bt BT_DISC 2    &bt BT_DISC 3   &bt BT_DISC 4     /**/     &none       &kp C_BRIGHTNESS_DEC    &kp C_VOL_DN    &none     &none    &none
+			&none    &none            &none                &none            &none           &none             /**/     &kp C_PP    &kp C_NEXT              &none           &none     &none    &none
 			>;
 		};
 	};
