@@ -266,7 +266,7 @@
 
 		sh: shift_pair {
 			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <2>;
+			#binding-cells = <0>;
 			bindings = <&kp>, <&kp>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
