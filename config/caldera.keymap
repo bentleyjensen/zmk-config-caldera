@@ -144,7 +144,7 @@
 			timeout-ms = <40>;
 			key-positions = <21 22>;
 			bindings = <&kp BSPC>
-		}
+		};
 
 		combo_esc {
 			timeout-ms = <40>;
@@ -269,7 +269,7 @@
 			#binding-cells = <2>;
 			bindings = <&kp>, <&kp>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
-		}
+		};
 
 	};
 
