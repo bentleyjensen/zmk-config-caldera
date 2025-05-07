@@ -49,7 +49,7 @@
 		combo_ltab {
 			timeout-ms = <40>;
 			key-positions = <13 14>;
-			bindings = <&kp LG(LBKT)>;
+			bindings = <&kp TAB>;
 		};
 
 		combo_back_history {
