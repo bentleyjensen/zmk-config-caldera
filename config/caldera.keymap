@@ -46,82 +46,22 @@
 		********** Left Hand Combos  ************
 		*****************************************/
 
-		combo_ltab {
+		combo_esc {
 			timeout-ms = <40>;
 			key-positions = <13 14>;
 			bindings = <&kp TAB>;
 		};
 
-		combo_back_history {
+		combo_ltab {
 			timeout-ms = <40>;
-			key-positions = <14 15>;
-			bindings = <&kp LG(LBKT)>;
-		};
-
-		combo_forward_history {
-			timeout-ms = <40>;
-			key-positions = <15 16>;
-			bindings = <&kp LG(RBKT)>;
-		};
-
-		combo_app_switcher {
-			timeout-ms = <40>;
-			key-positions = <38 39 40>;
-			bindings = <&kp LG(TAB)>;
-		};
-
-		combo_space {
-			timeout-ms = <40>;
-			key-positions = <10 12>;
-			bindings = <&kp SPACE>;
-		};
-
-		combo_ctrl_b {
-			timeout-ms = <40>;
-			key-positions = <26 27>;
-			bindings = <&kp LC(B)>;
+			key-positions = <24 25>;
+			bindings = <&kp TAB>;
 		};
 
 		combo_save {
 			timeout-ms = <40>;
 			key-positions = <27 28>;
 			bindings = <&kp LC(S)>;
-		};
-
-		combo_copy_yank {
-			timeout-ms = <40>;
-			key-positions = <38 39>;
-			bindings = <&kp LC(C)>;
-		};
-
-		combo_paste {
-			timeout-ms = <40>;
-			key-positions = <39 40>;
-			bindings = <&kp LC(V)>;
-		};
-
-		combo_ctrl_tab {
-			timeout-ms = <40>;
-			key-positions = <15 28>;
-			bindings = <&kp LC(TAB)>;
-		};
-
-		combo_ctrl_tab_back {
-			timeout-ms = <40>;
-			key-positions = <15 26>;
-			bindings = <&kp LC(LS(TAB))>;
-		};
-
-		combo_swap_tab_down {
-			timeout-ms = <40>;
-			key-positions = <16 27>;
-			bindings = <&kp LC(LS(PAGE_DOWN))>;
-		};
-
-		combo_swap_tab_up {
-			timeout-ms = <40>;
-			key-positions = <14 27>;
-			bindings = <&kp LC(LS(PAGE_UP))>;
 		};
 
 		/****************************************
@@ -170,20 +110,6 @@
 			timeout-ms = <40>;
 			key-positions = <44 45>;
 			bindings = <&kp TAB>;
-		};
-
-		combo_word_left {
-			timeout-ms = <40>;
-			key-positions = <20 31>;
-			bindings = <&kp LA(LEFT)>;
-			layers = <0 1 2 3>;
-		};
-
-		combo_word_right {
-			timeout-ms = <40>;
-			key-positions = <20 33>;
-			bindings = <&kp LA(RIGHT)>;
-			layers = <0 1 2 3>;
 		};
 
 		/****************************
