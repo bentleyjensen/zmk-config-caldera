@@ -215,20 +215,20 @@
 		default {
 			bindings = <
 			&none    &none                   &none         &none               &none               &none                /**/     &none             &none          &none         &none               &none                   &none
-			&none    &sh_qg                  &sh_cb        &sh_dq              &kp P               &kp Y                /**/     &kp F             &kp G          &kp C         &kp R               &kp L                   &none
+			&none    &kp APOS                &kp COMMA     &kp DOT             &kp P               &kp Y                /**/     &kp F             &kp G          &kp C         &kp R               &kp L                   &none
 			&none    &mt LC(LA(LSHIFT)) A    &kp O         &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I                /**/     &kp D             &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &none
-			&none    &sh_sq                  &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X                /**/     &kp B             &mt LCTRL M    &mt LCMD W    &mt LALT V          &kp Z                   &none
-			&none    &none                   &none         &none               &sk LSFT            &mo_kp SYM SPACE     /**/     &mt LCTRL BSPC    &key_repeat    &none         &none               &none                   &none
+			&none    &kp SEMI                &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X                /**/     &kp B             &mt LCTRL M    &mt LCMD W    &mt LALT V          &kp Z                   &none
+			&none    &none                   &none         &none               &sk LSFT            &mo_kp SYM SPACE     /**/     &mo_kp SYM BSPC   &key_repeat    &none         &none               &none                   &none
 			>;
 		};
 
 		/* 1 */
 		numbers {
 			bindings = <
-			&none    &none    &none        &none       &none     &none      /**/     &none        &none        &none        &none        &none        &none
+			&none    &none    &none        &none       &none     &none      /**/     &none        &kp PLUS     &kp MINUS    &kp STAR     &kp SLASH    &none
 			&none    &none    &none        &none       &none     &none      /**/     &none        &kp NUM_7    &kp NUM_8    &kp NUM_9    &none        &none
-			&none    &none    &sk LALT     &sk LCMD    &trans    &none      /**/     &kp MINUS    &kp NUM_4    &kp NUM_5    &kp NUM_6    &kp NUM_0    &none
-			&none    &none    &sk LCTRL    &none       &none     &none      /**/     &kp DOT      &kp NUM_1    &kp NUM_2    &kp NUM_3    &kp SLASH    &none
+			&none    &none    &none        &none       &trans    &none      /**/     &kp MINUS    &kp NUM_4    &kp NUM_5    &kp NUM_6    &kp NUM_0    &none
+			&none    &none    &sk LALT     &sk LCMD    &sk LCTRL &none      /**/     &kp DOT      &kp NUM_1    &kp NUM_2    &kp NUM_3    &none        &none
 			&none    &none    &none        &none       &trans    &trans     /**/     &trans       &trans       &none        &none        &none        &none
 			>;
 		};
