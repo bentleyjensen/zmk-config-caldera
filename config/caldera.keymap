@@ -46,7 +46,7 @@
 		********** Left Hand Combos  ************
 		*****************************************/
 
-		combo_esc {
+		combo_esc_l {
 			timeout-ms = <40>;
 			key-positions = <13 14>;
 			bindings = <&kp TAB>;
