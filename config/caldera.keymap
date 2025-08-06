@@ -52,9 +52,9 @@
 			bindings = <&kp TAB>;
 		};
 
-		combo_ltab {
+		combo_tab_l {
 			timeout-ms = <40>;
-			key-positions = <24 25>;
+			key-positions = <25 26>;
 			bindings = <&kp TAB>;
 		};
 
@@ -68,25 +68,13 @@
 		********** Right Hand Combos  ***********
 		****************************************/
 
-		combo_bol {
-			timeout-ms = <40>;
-			key-positions = <19 20>;
-			bindings = <&kp LG(LEFT)>;
-		};
-
-		combo_eol {
-			timeout-ms = <40>;
-			key-positions = <20 21>;
-			bindings = <&kp LG(RIGHT)>;
-		};
-
 		combo_backsp {
 			timeout-ms = <40>;
 			key-positions = <21 22>;
 			bindings = <&kp BSPC>;
 		};
 
-		combo_esc {
+		combo_esc_r {
 			timeout-ms = <40>;
 			key-positions = <31 32>;
 			bindings = <&kp ESC>;
@@ -102,11 +90,11 @@
 
 		combo_del {
 			timeout-ms = <40>;
-			key-positions = <43 44>;
+			key-positions = <9 10>;
 			bindings = <&kp DEL>;
 		};
 
-		combo_tab {
+		combo_tab_r {
 			timeout-ms = <40>;
 			key-positions = <44 45>;
 			bindings = <&kp TAB>;
@@ -117,29 +105,29 @@
 		******  Right Hand Vim  *****
 		*****************************/
 
-		combo_focus_left {
-			timeout-ms = <35>;
-			key-positions = <32 43>;
-			bindings = <&kp LC(H)>;
-		};
+		// combo_focus_left {
+		// 	timeout-ms = <35>;
+		// 	key-positions = <32 43>;
+		// 	bindings = <&kp LC(H)>;
+		// };
 
-		combo_focus_right {
-			timeout-ms = <50>;
-			key-positions = <32 45>;
-			bindings = <&kp LC(L)>;
-		};
+		// combo_focus_right {
+		// 	timeout-ms = <50>;
+		// 	key-positions = <32 45>;
+		// 	bindings = <&kp LC(L)>;
+		// };
 
-		combo_focus_down {
-			timeout-ms = <35>;
-			key-positions = <31 44>;
-			bindings = <&kp LC(J)>;
-		};
+		// combo_focus_down {
+		// 	timeout-ms = <35>;
+		// 	key-positions = <31 44>;
+		// 	bindings = <&kp LC(J)>;
+		// };
 
-		combo_focus_up {
-			timeout-ms = <50>;
-			key-positions = <33 44>;
-			bindings = <&kp LC(K)>;
-		};
+		// combo_focus_up {
+		// 	timeout-ms = <50>;
+		// 	key-positions = <33 44>;
+		// 	bindings = <&kp LC(K)>;
+		// };
 
 		/****************************************
 		 ********** Both Hand Combos  ***********
