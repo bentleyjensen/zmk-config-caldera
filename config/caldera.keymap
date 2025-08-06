@@ -180,60 +180,70 @@
 
 		sh_one: shift_pair_one_bang {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp EXCL>, <&kp NUM_1>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_two: shift_pair_two_at {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp AT>, <&kp NUM_2>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_three: shift_pair_three_hash {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp HASH>, <&kp NUM_3>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_four: shift_pair_four_dollar {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp DLLR>, <&kp NUM_4>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_five: shift_pair_five_percent {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp PRCNT>, <&kp NUM_5>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_six: shift_pair_six_caret {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp CARET>, <&kp NUM_6>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_seven: shift_pair_seven_ampersand {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp AMPS>, <&kp NUM_7>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_eight: shift_pair_eight_asterisk {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp ASTRK>, <&kp NUM_8>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_nine: shift_pair_nine_left_paren {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp LPAR>, <&kp NUM_9>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
 		sh_zero: shift_pair_zero_right_paren {
 			compatible = "zmk,behavior-mod-morph";
+			#binding-cells = <0>;
 			bindings = <&kp RPAR>, <&kp NUM_0>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
