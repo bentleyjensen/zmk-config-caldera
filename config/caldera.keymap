@@ -178,31 +178,63 @@
 			bindings = <&none>, <&bt BT_CLR>, <&bt BT_CLR_ALL>;
 		};
 
-		sh_qg: shift_pair_quote_grave {
+		sh_one: shift_pair_one_bang {
 			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp SQT>, <&kp GRAVE>;
+			bindings = <&kp EXCL>, <&kp NUM_1>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		sh_cb: shift_pair_comma_bang {
+		sh_two: shift_pair_two_at {
 			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp COMMA>, <&kp EXCL>;
+			bindings = <&kp AT>, <&kp NUM_2>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		sh_dq: shift_pair_dot_quote {
+		sh_three: shift_pair_three_hash {
 			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp DOT>, <&kp DQT>;
+			bindings = <&kp HASH>, <&kp NUM_3>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
-		sh_sq: shift_pair_slash_question {
+		sh_four: shift_pair_four_dollar {
 			compatible = "zmk,behavior-mod-morph";
-			#binding-cells = <0>;
-			bindings = <&kp FSLH>, <&kp QMARK>;
+			bindings = <&kp DLLR>, <&kp NUM_4>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		sh_five: shift_pair_five_percent {
+			compatible = "zmk,behavior-mod-morph";
+			bindings = <&kp PRCNT>, <&kp NUM_5>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		sh_six: shift_pair_six_caret {
+			compatible = "zmk,behavior-mod-morph";
+			bindings = <&kp CARET>, <&kp NUM_6>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		sh_seven: shift_pair_seven_ampersand {
+			compatible = "zmk,behavior-mod-morph";
+			bindings = <&kp AMPS>, <&kp NUM_7>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		sh_eight: shift_pair_eight_asterisk {
+			compatible = "zmk,behavior-mod-morph";
+			bindings = <&kp ASTRK>, <&kp NUM_8>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		sh_nine: shift_pair_nine_left_paren {
+			compatible = "zmk,behavior-mod-morph";
+			bindings = <&kp LPAR>, <&kp NUM_9>;
+			mods = <(MOD_LSFT|MOD_RSFT)>;
+		};
+
+		sh_zero: shift_pair_zero_right_paren {
+			compatible = "zmk,behavior-mod-morph";
+			bindings = <&kp RPAR>, <&kp NUM_0>;
 			mods = <(MOD_LSFT|MOD_RSFT)>;
 		};
 
@@ -214,11 +246,11 @@
 		/* 0 */
 		default {
 			bindings = <
-			&none    &none                   &none         &none               &none               &none                /**/     &none             &none          &none         &none               &none                   &none
-			&none    &kp APOS                &kp COMMA     &kp DOT             &kp P               &kp Y                /**/     &kp F             &kp G          &kp C         &kp R               &kp L                   &none
-			&none    &mt LC(LA(LSHIFT)) A    &kp O         &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I                /**/     &kp D             &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &none
-			&none    &kp SEMI                &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X                /**/     &kp B             &mt LCTRL M    &mt LCMD W    &mt LALT V          &kp Z                   &none
-			&none    &none                   &none         &none               &sk LSFT            &mo_kp SYM SPACE     /**/     &mo_kp SYM BSPC   &key_repeat    &none         &none               &none                   &none
+			&kp GRAVE    &sh_one                 &sh_two       &sh_three           &sh_four            &sh_five             /**/     &sh_six           &sh_seven      &sh_eight     &sh_nine            &sh_zero                &none
+			&none        &kp APOS                &kp COMMA     &kp DOT             &kp P               &kp Y                /**/     &kp F             &kp G          &kp C         &kp R               &kp L                   &none
+			&none        &mt LC(LA(LSHIFT)) A    &kp O         &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I                /**/     &kp D             &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &none
+			&none        &kp SEMI                &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X                /**/     &kp B             &mt LCTRL M    &mt LCMD W    &mt LALT V          &kp Z                   &none
+			&none        &none                   &none         &none               &sk LSFT            &mo_kp SYM SPACE     /**/     &mo_kp SYM BSPC   &key_repeat    &none         &none               &none                   &none
 			>;
 		};
 
