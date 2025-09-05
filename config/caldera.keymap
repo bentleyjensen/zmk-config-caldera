@@ -74,13 +74,6 @@
 			bindings = <&kp BSPC>;
 		};
 
-		combo_esc_r {
-			timeout-ms = <40>;
-			key-positions = <31 32>;
-			bindings = <&kp ESC>;
-			layers = <0 1 2 3>;
-		};
-
 		combo_return {
 			timeout-ms = <40>;
 			key-positions = <33 34>;
