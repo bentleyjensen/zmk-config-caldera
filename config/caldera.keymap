@@ -100,35 +100,6 @@
 			bindings = <&kp TAB>;
 		};
 
-		/****************************
-		******    Code Combos   *****
-		******  Right Hand Vim  *****
-		*****************************/
-
-		// combo_focus_left {
-		// 	timeout-ms = <35>;
-		// 	key-positions = <32 43>;
-		// 	bindings = <&kp LC(H)>;
-		// };
-
-		// combo_focus_right {
-		// 	timeout-ms = <50>;
-		// 	key-positions = <32 45>;
-		// 	bindings = <&kp LC(L)>;
-		// };
-
-		// combo_focus_down {
-		// 	timeout-ms = <35>;
-		// 	key-positions = <31 44>;
-		// 	bindings = <&kp LC(J)>;
-		// };
-
-		// combo_focus_up {
-		// 	timeout-ms = <50>;
-		// 	key-positions = <33 44>;
-		// 	bindings = <&kp LC(K)>;
-		// };
-
 		/****************************************
 		 ********** Both Hand Combos  ***********
 		 ****************************************/
@@ -256,44 +227,44 @@
 		/* 0 */
 		default {
 			bindings = <
-			&kp GRAVE    &sh_one                 &sh_two       &sh_three           &sh_four            &sh_five             /**/     &sh_six           &sh_seven      &sh_eight     &sh_nine            &sh_zero                &kp EQUAL
-			&none        &kp APOS                &kp COMMA     &kp DOT             &kp P               &kp Y                /**/     &kp F             &kp G          &kp C         &kp R               &kp L                   &kp SLASH
-			&none        &mt LC(LA(LSHIFT)) A    &kp O         &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I                /**/     &kp D             &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &kp MINUS
-			&none        &kp SEMI                &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X                /**/     &kp B             &mt LCTRL M    &mt LCMD W    &mt LALT V          &kp Z                   &none
-			&none        &none                   &none         &none               &sk LSFT            &mo_kp SYM SPACE     /**/     &mo_kp SYM BSPC   &key_repeat    &none         &none               &none                   &none
+			&kp GRAVE    &sh_one                 &sh_two       &sh_three           &sh_four            &sh_five     /**/     &sh_six     &sh_seven      &sh_eight     &sh_nine            &sh_zero                &kp EQUAL
+			&mo SYM      &kp APOS                &kp COMMA     &kp DOT             &kp P               &kp Y        /**/     &kp F       &kp G          &kp C         &kp R               &kp L                   &kp SLASH
+			&mo NAV      &mt LC(LA(LSHIFT)) A    &kp O         &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I        /**/     &kp D       &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &kp MINUS
+			&mo NUM      &kp SEMI                &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X        /**/     &kp B       &mt RCTRL M    &mt RCMD W    &mt RALT V          &kp Z                   &mo SYM
+			&mo SYS      &kp LCTRL               &kp LALT      &kp LCMD            &sk LSFT            &kp SPACE    /**/     &kp BSPC    &sk RSFT       &kp RCMD      &kp RALT            &kp RCTRL               &mo SYS
 			>;
 		};
 
 		/* 1 */
 		numbers {
 			bindings = <
-			&none    &none       &none       &none       &none     &none      /**/     &none        &kp PLUS     &kp MINUS    &kp STAR     &kp SLASH    &none
-			&none    &none       &none       &none       &none     &none      /**/     &none        &kp NUM_7    &kp NUM_8    &kp NUM_9    &none        &none
-			&none    &none       &none       &none       &trans    &none      /**/     &kp MINUS    &kp NUM_4    &kp NUM_5    &kp NUM_6    &kp NUM_0    &none
-			&none    &sk LALT    &sk LCMD    &sk LCTRL   &none     &none      /**/     &kp DOT      &kp NUM_1    &kp NUM_2    &kp NUM_3    &none        &none
-			&none    &none       &none       &none       &trans    &trans     /**/     &trans       &kp NUM_0    &none        &none        &none        &none
+			&none     &none     &none       &none       &none        &none      /**/     &none        &kp PLUS     &kp MINUS    &kp STAR     &kp SLASH    &none
+			&trans    &none     &none       &none       &none        &none      /**/     &kp SLASH    &kp NUM_7    &kp NUM_8    &kp NUM_9    &none        &none
+			&trans    &none     &none       &none       &trans       &none      /**/     &kp MINUS    &kp NUM_4    &kp NUM_5    &kp NUM_6    &kp NUM_0    &none
+			&trans    &none     &sk LALT    &sk LCMD    &sk LCTRL    &none      /**/     &kp DOT      &kp NUM_1    &kp NUM_2    &kp NUM_3    &none        &trans
+			&trans    &trans    &trans      &trans      &trans       &trans     /**/     &trans       &kp NUM_0    &trans       &trans       &trans       &trans
 			>;
 		};
 
 		/* 2 */
 		symbol {
 			bindings = <
-			&kp F1   &kp F2       &kp F3         &kp F4           &kp F5            &kp F6        /**/     &kp F7           &kp F8          &kp F9         &kp F10         &kp F11      &kp F12
-			&none    &kp GRAVE    &kp EXCL       &kp LBRC         &kp RBRC          &none         /**/     &none            &kp PERCENT     &kp PLUS       &kp EQUAL       &kp QMARK    &none
-			&none    &kp UNDER    &kp AMPS       &kp LPAR         &kp RPAR          &kp TILDE     /**/     &kp CARET        &kp STAR        &kp HASH       &kp DOLLAR      &kp MINUS    &none
-			&none    &kp SEMI     &mt LALT AT    &mt LCMD LBKT    &mt LCTRL RBKT    &kp PIPE      /**/     &kp BACKSLASH    &mt LCTRL LT    &mt LCMD GT    &mt LALT DQT    &kp COLON    &none
-			&none    &none        &none          &none            &trans            &trans        /**/     &trans           &trans          &none          &none           &none        &none
+			&kp F1    &kp F2       &kp F3         &kp F4           &kp F5            &kp F6        /**/     &kp F7           &kp F8          &kp F9         &kp F10         &kp F11      &kp F12
+			&trans    &kp GRAVE    &kp EXCL       &kp LBRC         &kp RBRC          &none         /**/     &none            &kp PERCENT     &kp PLUS       &kp EQUAL       &kp QMARK    &none
+			&trans    &kp UNDER    &kp AMPS       &kp LPAR         &kp RPAR          &kp TILDE     /**/     &kp CARET        &kp STAR        &kp HASH       &kp DOLLAR      &kp MINUS    &none
+			&trans    &kp SEMI     &mt LALT AT    &mt LCMD LBKT    &mt LCTRL RBKT    &kp PIPE      /**/     &kp BACKSLASH    &mt LCTRL LT    &mt LCMD GT    &mt LALT DQT    &kp COLON    &trans
+			&trans    &trans       &trans         &trans           &trans            &trans        /**/     &trans           &trans          &trans         &trans          &trans       &trans
 			>;
 		};
 
 		/* 3 */
 		navigation {
 			bindings = <
-			&none    &none    &none              &none     &none           &none      /**/     &none       &none            &none          &none        &none    &none
-			&none    &none    &kp INSERT         &none     &none           &none      /**/     &none       &kp END          &kp HOME       &none        &kp DEL  &none
-			&none    &none    &mt LALT RETURN    &trans    &mt LCMD TAB    &none      /**/     &kp LEFT    &kp DOWN         &kp UP         &kp RIGHT    &none    &none
-			&none    &none    &none              &none     &kp LCTRL       &none      /**/     &none       &kp PAGE_DOWN    &kp PAGE_UP    &none        &none    &none
-			&none    &none    &none              &none     &trans          &trans     /**/     &trans      &trans           &none          &none        &none    &none
+			&none     &none     &none              &none     &none           &none      /**/     &none       &none            &none          &none        &none    &none
+			&trans    &none     &kp INSERT         &none     &none           &none      /**/     &none       &kp END          &kp HOME       &none        &kp DEL  &none
+			&trans    &none     &mt LALT RETURN    &trans    &mt LCMD TAB    &none      /**/     &kp LEFT    &kp DOWN         &kp UP         &kp RIGHT    &none    &none
+			&trans    &none     &none              &none     &kp LCTRL       &none      /**/     &none       &kp PAGE_DOWN    &kp PAGE_UP    &none        &none    &none
+			&trans    &trans    &trans             &trans    &trans          &trans     /**/     &trans      &trans           &trans         &trans       &trans   &trans
 			>;
 		};
 
@@ -301,10 +272,10 @@
 		system {
 			bindings = <
 			&none    &none            &none                &none            &none           &none             /**/     &none       &none                   &none           &none     &none    &none
-			&none    &bt_clcla        &ext_power EP_TOG    &out OUT_BLE     &out OUT_USB    &out OUT_TOG      /**/     &none       &none                   &none           &none     &none    &none
+			&none    &bt_clcla        &ext_power EP_TOG    &out OUT_BLE     &out OUT_USB    &out OUT_TOG      /**/     &kp C_PP    &kp C_PREV              &kp C_NEXT      &none     &none    &none
 			&none    &bt BT_SEL 0     &bt BT_SEL 1         &bt BT_SEL 2     &bt BT_SEL 3    &bt BT_SEL 4      /**/     &none       &kp C_BRIGHTNESS_INC    &kp C_VOL_UP    &trans    &none    &none
 			&none    &bt BT_DISC 0    &bt BT_DISC 1        &bt BT_DISC 2    &bt BT_DISC 3   &bt BT_DISC 4     /**/     &none       &kp C_BRIGHTNESS_DEC    &kp C_VOL_DN    &none     &none    &none
-			&none    &none            &none                &none            &none           &none             /**/     &kp C_PP    &kp C_NEXT              &none           &none     &none    &none
+			&none    &none            &none                &none            &none           &none             /**/     &none       &none                   &none           &none     &none    &none
 			>;
 		};
 	};
