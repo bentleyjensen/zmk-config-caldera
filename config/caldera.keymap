@@ -142,6 +142,10 @@
 			bindings = <&none>, <&bt BT_CLR>, <&bt BT_CLR_ALL>;
 		};
 
+		/****************************************
+		 ********* Custom Shift Pairs ***********
+		 ****************************************/
+
 		sh_one: shift_pair_one_bang {
 			compatible = "zmk,behavior-mod-morph";
 			#binding-cells = <0>;
@@ -220,11 +224,11 @@
 		/* 0 */
 		default {
 			bindings = <
-			&kp GRAVE    &sh_one                 &sh_two       &sh_three           &sh_four            &sh_five     /**/     &sh_six     &sh_seven      &sh_eight     &sh_nine            &sh_zero                &kp EQUAL
-			&mo SYM      &kp APOS                &kp COMMA     &kp DOT             &kp P               &kp Y        /**/     &kp F       &kp G          &kp C         &kp R               &kp L                   &kp SLASH
-			&mo NAV      &mt LC(LA(LSHIFT)) A    &kp O         &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I        /**/     &kp D       &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &kp MINUS
-			&mo NUM      &kp SEMI                &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X        /**/     &kp B       &mt RCTRL M    &mt RCMD W    &mt RALT V          &kp Z                   &mo SYM
-			&mo SYS      &kp LCTRL               &kp LALT      &kp LCMD            &sk LSFT            &kp SPACE    /**/     &kp BSPC    &sk RSFT       &kp RCMD      &kp RALT            &kp RCTRL               &mo SYS
+			&kp GRAVE     &sh_one                 &sh_two       &sh_three           &sh_four            &sh_five     /**/     &sh_six     &sh_seven      &sh_eight     &sh_nine            &sh_zero                &kp EQUAL
+			&none         &kp APOS                &kp COMMA     &kp DOT             &kp P               &kp Y        /**/     &kp F       &kp G          &kp C         &kp R               &kp L                   &kp SLASH
+			&mo SYM       &mt LC(LA(LSHIFT)) A    &kp O         &mo_kp_tap NAV E    &mo_kp_tap NUM U    &kp I        /**/     &kp D       &kp H          &kp T         &mo_kp_tap SYS N    &mt LC(LA(LSHIFT)) S    &kp MINUS
+			&kp LSHIFT    &kp SEMI                &mt LALT Q    &mt LCMD J          &mt LCTRL K         &kp X        /**/     &kp B       &mt RCTRL M    &mt RCMD W    &mt RALT V          &kp Z                   &mo SYM
+			&mo SYS       &kp LCTRL               &kp LALT      &kp LCMD            &sk LSFT            &kp SPACE    /**/     &kp BSPC    &sk RSFT       &kp RCMD      &kp RALT            &kp RCTRL               &mo SYS
 			>;
 		};
 
