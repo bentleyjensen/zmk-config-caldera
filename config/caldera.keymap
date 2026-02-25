@@ -235,7 +235,7 @@
 		default {
 			bindings = <
 			&kp GRAVE     &sh_one                 &sh_two       &sh_three           &sh_four            &sh_five     /**/     &sh_six     &sh_seven      &sh_eight         &sh_nine            &sh_zero                   &kp EQUAL
-			&none         &kp Q                   &kp W         &kp E               &kp R               &kp T        /**/     &kp Y       &kp U          &kp I             &kp O               &kp P                      &kp SLASH
+			&mo SYS       &kp Q                   &kp W         &kp E               &kp R               &kp T        /**/     &kp Y       &kp U          &kp I             &kp O               &kp P                      &kp SLASH
 			&mo SYM       &mt LC(LA(LSHIFT)) A    &kp S         &mo_kp_tap NAV D    &mo_kp_tap NUM F    &kp G        /**/     &kp H       &kp J          &kp K             &mo_kp_tap SYS L    &mt LC(LA(LSHIFT)) SEMI    &kp MINUS
 			&kp LSHIFT    &kp Z                   &mt LALT X    &mt LCMD C          &mt LCTRL V         &kp B        /**/     &kp N       &mt RCTRL M    &mt RCMD COMMA    &mt RALT DOT        &kp SLASH                  &mo SYM
 			&mo SYS       &kp LCTRL               &kp LALT      &kp LCMD            &sk LSFT            &kp SPACE    /**/     &kp BSPC    &sk RSFT       &kp RCMD          &kp RALT            &kp RCTRL                  &mo SYS
